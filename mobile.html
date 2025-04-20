@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Mobile | Sua Loja</title>
+    <meta name="description" content="Versão mobile para venda de produtos no Mercado Livre">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para mobile */
+        @media (min-width: 768px) {
+            .mobile-only { display: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Menu Mobile -->
+    <header class="bg-blue-600 text-white sticky top-0 z-50 md:hidden">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold">Sua Loja</h1>
+            <button id="menuButton" class="text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden bg-blue-700">
+            <nav class="container mx-auto px-4 py-2">
+                <ul class="flex flex-col space-y-3">
+                    <li><a href="#" class="block py-2 hover:bg-blue-500 px-3 rounded">Início</a></li>
+                    <li><a href="#produtos" class="block py-2 hover:bg-blue-500 px-3 rounded">Produtos</a></li>
+                    <li><a href="#contato" class="block py-2 hover:bg-blue-500 px-3 rounded">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Desktop (oculto em mobile) -->
+    <header class="bg-blue-600 text-white hidden md:block">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Sua Loja</h1>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="hover:text-blue-200">Início</a></li>
+                        <li><a href="#produtos" class="hover:text-blue-200">Produtos</a></li>
+                        <li><a href="#contato" class="hover:text-blue-200">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-500 text-white py-12 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Produtos em Destaque</h2>
+            <p class="text-lg mb-6">Compre com segurança pelo Mercado Livre</p>
+            <a href="#produtos" class="inline-block bg-white text-blue-600 px-6 py-2 rounded-lg font-medium">
+                Ver Produtos <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="py-8 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-8">Nossos Produtos</h2>
+            
+            <!-- Lista de Produtos - 1 coluna em mobile -->
+            <div class="space-y-6 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+                <!-- Produto 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://picsum.photos/600/400?random=1" alt="Produto 1" class="w-full h-48 object-cover">
+                        <span class="absolute top-2 right-2 bg-yellow-400 text-xs font-bold px-2 py-1 rounded">Destaque</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Produto 1</h3>
+                        <p class="text-gray-600 text-sm mt-1">Descrição resumida do produto</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="font-bold">R$ 99,90</span>
+                            <a href="https://www.mercadolivre.com.br" target="_blank" 
+                               class="bg-yellow-400 hover:bg-yellow-500 text-sm text-white px-3 py-1 rounded flex items-center">
+                                Comprar <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=2" alt="Produto 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Produto 2</h3>
+                        <p class="text-gray-600 text-sm mt-1">Descrição resumida do produto</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="font-bold">R$ 149,90</span>
+                            <a href="https://www.mercadolivre.com.br" target="_blank"
+                               class="bg-yellow-400 hover:bg-yellow-500 text-sm text-white px-3 py-1 rounded flex items-center">
+                                Comprar <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=3" alt="Produto 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Produto 3</h3>
+                        <p class="text-gray-600 text-sm mt-1">Descrição resumida do produto</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="font-bold">R$ 199,90</span>
+                            <a href="https://www.mercadolivre.com.br" target="_blank"
+                               class="bg-yellow-400 hover:bg-yellow-500 text-sm text-white px-3 py-1 rounded flex items-center">
+                                Comprar <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-6">Fale Conosco</h2>
+            <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-sm">
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-1">Nome</label>
+                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-1">Email</label>
+                        <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-1">Mensagem</label>
+                        <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+                        Enviar <i class="fas fa-paper-plane ml-1"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Mobile -->
+    <footer class="bg-gray-800 text-white py-6 px-4 md:hidden">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a>
+                <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <p class="text-sm text-gray-400">© 2023 Sua Loja. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Footer Desktop -->
+    <footer class="bg-gray-800 text-white py-6 hidden md:block">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400 mb-4 md:mb-0">© 2023 Sua Loja. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white">Termos</a>
+                    <a href="#" class="text-gray-300 hover:text-white">Privacidade</a>
+                    <a href="#" class="text-gray-300 hover:text-white">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para menu mobile -->
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
